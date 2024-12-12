@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Enviar Mensagem</title>
+</head>
+<body>
+    <h1>Enviar Mensagem</h1>
+    <form action="/enviar_mensagem" method="post">
+        Mensagem: <textarea name="mensagem" required></textarea><br>
+        <input type="submit" value="Enviar">
+    </form>
+    <a href="{{ url_for('mensagens') }}">Ver Mensagens</a>
+</body>
+</html>

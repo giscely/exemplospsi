@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Feedback</title>
+</head>
+<body>
+    <h1>Formulário de Feedback</h1>
+    {% if error %}
+        <p style="color:red;">{{ error }}</p>
+    {% endif %}
+    <form action="/feedback" method="post">
+        Nome: <input type="text" name="nome" value="{{ nome or '' }}" required><br>
+        Email: <input type="email" name="email" value="{{ email or '' }}" required><br>
+        Comentário: <textarea name="comentario">{{ comentario or '' }}</textarea><br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

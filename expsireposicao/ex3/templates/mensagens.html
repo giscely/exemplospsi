@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Mensagens</title>
+</head>
+<body>
+    <h1>Mensagens Enviadas</h1>
+    {% for mem in lista_mensagem %}
+        <p>{{ mem }}</p>
+    {% endfor %}
+    <a href="{{ url_for('enviar_mensagem') }}">Enviar Nova Mensagem</a>
+</body>
+</html>
